@@ -14,5 +14,7 @@ declare global {
     GraphLayoutPredict: any;
     stats: any;
     g2: any;
+    React: any;
+    ReactDOM: any;
   }
 }
