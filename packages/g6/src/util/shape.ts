@@ -1,35 +1,36 @@
 import {
+  AABB,
   Circle,
   DisplayObject,
   Ellipse,
   Group,
+  HTML,
   IElement,
+  Image,
   Line,
+  Path,
   Polygon,
   Polyline,
   Rect,
   Text,
-  Image,
-  Path,
-  AABB,
   Tuple3Number,
 } from '@antv/g';
 import { clone, isArray, isNumber } from '@antv/util';
 import { DEFAULT_LABEL_BG_PADDING } from '../constant';
+import Combo from '../item/combo';
+import Edge from '../item/edge';
+import Node from '../item/node';
+import { ComboDisplayModel, IGraph } from '../types';
 import { Padding, Point, StandardPadding } from '../types/common';
 import { EdgeDisplayModel, EdgeShapeMap } from '../types/edge';
 import {
   GShapeStyle,
-  SHAPE_TYPE,
   ItemShapeStyles,
-  ShapeStyle,
+  SHAPE_TYPE,
   SHAPE_TYPE_3D,
+  ShapeStyle,
 } from '../types/item';
 import { NodeDisplayModel, NodeShapeMap } from '../types/node';
-import { ComboDisplayModel, IGraph } from '../types';
-import Node from '../item/node';
-import Edge from '../item/edge';
-import Combo from '../item/combo';
 import { getShapeAnimateBeginStyles } from './animate';
 import { isArrayOverlap } from './array';
 import { isBetween } from './math';
@@ -45,6 +46,7 @@ export const ShapeTagMap = {
   image: Image,
   path: Path,
   group: Group,
+  html: HTML,
 };
 
 const LINE_TYPES = ['line', 'polyline', 'path'];
